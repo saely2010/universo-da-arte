@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo da Arte</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F5EFE6;
+            font-family: Arial, sans-serif;
+            color: #49343B;
+            margin: 0;
+        }
+
+        header {
+            background-color: #573044;
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 19px;
+        }
+
+        nav {
+            background-color: #70465B;
+            text-align: center;
+            padding: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #70465B;
+            font-size: 27px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .obra {
+            background-color: #F5EFE6;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .obra img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .obra h3 {
+            color: #70465B;
+            padding: 0 15px;
+        }
+
+        .obra p {
+            padding: 0 15px 15px;
+            font-size: 15px;
+        }
+
+        .destaque {
+            background-color: #70465B;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .destaque h2 {
+            color: white;
+        }
+
+        footer {
+            background-color: #573044;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            main {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Universo da Arte</h1>
+        <p>Um mundo de cores, criatividade e inspiração!</p>
+        <p>Descubra a beleza da arte em suas diferentes formas.</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre a arte</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#importancia">Importância</a>
+    </nav>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Bem-vindos ao Universo da Arte!</h2>
+            <p>
+                A arte está presente em nossas vidas de diversas formas.
+                Ela expressa sentimentos, ideias, histórias e culturas.
+                Neste blog, vamos explorar diferentes manifestações
+                artísticas e conhecer um pouco mais desse universo.
+            </p>
+        </section>
+
+        <section id="sobre">
+            <h2>O que é arte?</h2>
+            <p>
+                A arte é uma forma de expressão humana.
+                Por meio de pinturas, desenhos, esculturas,
+                fotografias e músicas, podemos transmitir emoções,
+                compartilhar experiências e contar histórias.
+            </p>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Arte</h2>
+            <p>Conheça algumas obras e expressões artísticas:</p>
+
+            <div class="galeria">
+
+                <div class="obra">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=700"
+                    alt="Pintura artística em uma galeria">
+
+                    <h3>A beleza da pintura</h3>
+                    <p>
+                        A pintura utiliza cores e formas para
+                        representar ideias e sentimentos.
+                    </p>
+                </div>
+
+                <div class="obra">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=700"
+                    alt="Obra de arte colorida">
+
+                    <h3>Arte moderna</h3>
+                    <p>
+                        A arte moderna apresenta novas maneiras
+                        de enxergar e representar o mundo.
+                    </p>
+                </div>
+
+                <div class="obra">
+                    <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=700"
+                    alt="Pintura abstrata colorida">
+
+                    <h3>Arte abstrata</h3>
+                    <p>
+                        Utiliza formas e cores para despertar
+                        diferentes interpretações.
+                    </p>
+                </div>
+
+                <div class="obra">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=700"
+                    alt="Quadro de pintura exposto">
+
+                    <h3>Arte clássica</h3>
+                    <p>
+                        Reúne obras que marcaram diferentes
+                        períodos da história.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="importancia">
+            <h2>A importância da arte</h2>
+            <p>
+                A arte estimula a criatividade, a imaginação
+                e o pensamento crítico. Também ajuda a preservar
+                culturas, transmitir conhecimentos e compreender
+                diferentes maneiras de viver e pensar.
+            </p>
+        </section>
+
+        <section>
+            <div class="destaque">
+                <h2>A arte transforma o mundo!</h2>
+                <p>
+                    Cada obra possui uma história e cada pessoa
+                    pode encontrar um significado diferente nela.
+                    A criatividade não tem limites!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Universo da Arte</p>
+        <p>Projeto desenvolvido por Sarah</p>
+        <p>2026 - Blog de Arte e Criatividade</p>
+    </footer>
+
+</body>
+</html>
