@@ -43,8 +43,12 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 12px;
             font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         main {
@@ -111,6 +115,65 @@
             color: white;
         }
 
+        /* Estilo das publicações */
+
+        #publicacoes article {
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+            background-color: #F5EFE6;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+        }
+
+        #publicacoes article img {
+            width: 220px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .conteudo-artigo {
+            flex: 1;
+        }
+
+        .conteudo-artigo h3 {
+            color: #70465B;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .artigo-autor {
+            font-size: 14px;
+            color: #806A73;
+        }
+
+        .reacoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .reacoes button {
+            background-color: white;
+            border: 1px solid #D8C6CE;
+            border-radius: 20px;
+            padding: 8px 13px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .reacoes button:hover {
+            background-color: #EADDE3;
+        }
+
+        .reacoes button.selecionado {
+            background-color: #E5CED9;
+            border: 2px solid #70465B;
+        }
+
         footer {
             background-color: #573044;
             color: white;
@@ -132,6 +195,19 @@
             main {
                 padding: 12px;
             }
+
+            #publicacoes article {
+                flex-direction: column;
+            }
+
+            #publicacoes article img {
+                width: 100%;
+                height: 210px;
+            }
+
+            .destaque {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -149,6 +225,7 @@
         <a href="#sobre">Sobre a arte</a>
         <a href="#galeria">Galeria</a>
         <a href="#importancia">Importância</a>
+        <a href="#publicacoes">Publicações</a>
     </nav>
 
     <main>
@@ -236,6 +313,66 @@
             </p>
         </section>
 
+        <section id="publicacoes">
+            <h2>Publicações do Blog</h2>
+            <p>
+                Confira nossas publicações e compartilhe sua reação!
+            </p>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=700"
+                    alt="Materiais de pintura e criação artística">
+
+                <div class="conteudo-artigo">
+                    <h3>A criatividade através da pintura</h3>
+                    <p class="artigo-autor">Publicado por Sarah</p>
+
+                    <p>
+                        A pintura é uma das formas mais bonitas de
+                        expressar sentimentos e ideias. Com diferentes
+                        cores, técnicas e materiais, podemos criar
+                        obras únicas e mostrar nossa criatividade.
+                    </p>
+
+                    <div class="reacoes">
+                        <button type="button">❤️ <span>0</span></button>
+                        <button type="button">😍 <span>0</span></button>
+                        <button type="button">👏 <span>0</span></button>
+                        <button type="button">😂 <span>0</span></button>
+                        <button type="button">👍 <span>0</span></button>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=700"
+                    alt="Pintura abstrata colorida">
+
+                <div class="conteudo-artigo">
+                    <h3>A arte e suas diferentes interpretações</h3>
+                    <p class="artigo-autor">Publicado por Sarah</p>
+
+                    <p>
+                        Uma mesma obra pode despertar sentimentos
+                        e opiniões diferentes em cada pessoa.
+                        Isso mostra que a arte não possui apenas
+                        uma maneira de ser compreendida.
+                    </p>
+
+                    <div class="reacoes">
+                        <button type="button">❤️ <span>0</span></button>
+                        <button type="button">😍 <span>0</span></button>
+                        <button type="button">👏 <span>0</span></button>
+                        <button type="button">😂 <span>0</span></button>
+                        <button type="button">👍 <span>0</span></button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
         <section>
             <div class="destaque">
                 <h2>A arte transforma o mundo!</h2>
@@ -254,6 +391,33 @@
         <p>Projeto desenvolvido por Sarah</p>
         <p>2026 - Blog de Arte e Criatividade</p>
     </footer>
+
+    <script>
+        let botoes = document.querySelectorAll(".reacoes button");
+
+        botoes.forEach(function(botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", function() {
+
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                    botao.classList.add("selecionado");
+
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                    botao.classList.remove("selecionado");
+                }
+
+            });
+
+        });
+    </script>
 
 </body>
 </html>
